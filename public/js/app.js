@@ -26,6 +26,7 @@ weatherForm.addEventListener('submit', (e) => {
             messagethree.textContent = '[ Pioggia:              '+data.forecast.pioggia+  ' ] -----  '+'  [   Umidità:           ' +data.forecast.umidita+' ]'
             messagefour.textContent =  '[ Visibilita:         '+ data.forecast.visibilita+ ' ] -----  '+'  [   data:             '+data.forecast.data+' ]'
           }
+          
     })
 })
 })
