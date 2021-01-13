@@ -5,6 +5,8 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')   /* recupero il dato attraverso il box di ricerca*/
 const messageOne = document.querySelector('#message-1')
 const messagetwo = document.querySelector('#message-2')
+const messagethree = document.querySelector('#message-3')
+const messagefour = document.querySelector('#message-4')
 
 
 weatherForm.addEventListener('submit', (e) => {
@@ -20,8 +22,10 @@ weatherForm.addEventListener('submit', (e) => {
             messageOne.textContent = data.error
         }else{                                     /*recupero i dati tramite url */
             messageOne.textContent = data.location.toString() 
-            messagetwo.textContent ='Gradi: ' +data.forecast.gradi+   '      Probabilità di pioggia: '+ data.forecast.pioggia+'%'
-        }
+            messagetwo.textContent =  '[ Descrizione:        '+data.forecast.descrizione+ ' ]-----  '+'  [            Gradi:            ' +data.forecast.gradi+ ' ]-----  '+ '  [     Gradi percepiti:          '+ data.forecast.temPercepita + ' ]'   
+            messagethree.textContent = '[ Pioggia:              '+data.forecast.pioggia+  ' ] -----  '+'  [   Umidità:           ' +data.forecast.umidita+' ]'
+            messagefour.textContent =  '[ Visibilita:         '+ data.forecast.visibilita+ ' ] -----  '+'  [   data:             '+data.forecast.data+' ]'
+          }
     })
 })
 })
