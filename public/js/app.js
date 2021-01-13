@@ -1,5 +1,5 @@
 
-console.log('ciao')
+
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')   /* recupero il dato attraverso il box di ricerca*/
